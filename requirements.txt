@@ -1,0 +1,29 @@
+# ACG兴趣聚合平台 - Python依赖
+# 部署到Vercel所需的依赖包
+
+# Web框架
+flask==2.3.3
+Werkzeug==2.3.7
+
+# HTTP请求
+requests==2.31.0
+urllib3==2.0.7
+
+# HTML解析
+beautifulsoup4==4.12.2
+lxml==4.9.3
+soupsieve==2.5
+
+# 数据处理
+python-dateutil==2.8.2
+
+# 工具库
+certifi==2023.7.22
+charset-normalizer==3.3.2
+idna==3.4
+
+# 生产环境
+MarkupSafe==2.1.3
+click==8.1.7
+itsdangerous==2.1.2
+Jinja2==3.1.2

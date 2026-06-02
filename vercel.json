@@ -1,1 +1,94 @@
-﻿{"outputDirectory":"frontend"}
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/search",
+      "dest": "/api/search.py"
+    },
+    {
+      "src": "/api/ao3",
+      "dest": "/api/ao3.py"
+    },
+    {
+      "src": "/api/lofter",
+      "dest": "/api/lofter.py"
+    },
+    {
+      "src": "/api/weibo",
+      "dest": "/api/weibo.py"
+    },
+    {
+      "src": "/api/bilibili",
+      "dest": "/api/bilibili.py"
+    },
+    {
+      "src": "/api/afdian",
+      "dest": "/api/afdian.py"
+    },
+    {
+      "src": "/api/ai-copy",
+      "dest": "/api/ai-copy.py"
+    },
+    {
+      "src": "/api/user",
+      "dest": "/api/user.py"
+    },
+    {
+      "src": "/api/xp",
+      "dest": "/api/xp.py"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/frontend/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/frontend/js/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/frontend/assets/$1"
+    },
+    {
+      "src": "/data/(.*)",
+      "dest": "/data/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/frontend/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
+        }
+      ]
+    }
+  ]
+}
